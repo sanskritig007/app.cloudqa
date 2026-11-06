@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modified Automation Practice Form (Chaos Test)</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; padding: 30px; background: #f8fafc; }
+        .card { background: white; max-width: 650px; margin: 0 auto; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .field-block { margin-bottom: 20px; padding: 12px; border-left: 4px solid #3b82f6; background: #f1f5f9; border-radius: 4px; }
+        label { font-weight: 600; display: block; margin-bottom: 8px; color: #1e293b; }
+        input[type="text"], select { width: 100%; padding: 10px; border: 1px solid #cbd5e1; border-radius: 4px; box-sizing: border-box; }
+        .radio-options label { display: inline-block; font-weight: normal; margin-right: 15px; cursor: pointer; }
+        .badge { background: #ef4444; color: white; padding: 2px 6px; border-radius: 4px; font-size: 12px; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Modified Automation Practice Form <span class="badge">DOM Changed</span></h2>
+        <p style="color: #64748b; font-size: 14px;">
+            Notice: All standard IDs, names, and field order have been drastically altered to simulate production DOM changes.
+        </p>
+
+        <!-- NOTE: State is moved to the FIRST position (Order Changed!) -->
+        <!-- IDs changed from 'state' to 'region_selector_9942' -->
+        <div class="field-block">
+            <label class="custom-label">State</label>
+            <select id="region_selector_9942" name="dynamic_region_code" class="custom-dropdown">
+                <option value="">-- Choose Territory --</option>
+                <option value="US">United States</option>
+                <option value="IN">India</option>
+                <option value="UK">United Kingdom</option>
+                <option value="AU">Australia</option>
+            </select>
+        </div>
+
+        <!-- NOTE: Gender is in the middle -->
+        <!-- Radio inputs have scrambled IDs and wrapper structures -->
+        <div class="field-block">
+            <label class="custom-label">Gender</label>
+            <div class="radio-options">
+                <label>
+                    <input type="radio" name="opt_gender_shuffled" id="rad_m_8871" value="Male"> Male
+                </label>
+                <label>
+                    <input type="radio" name="opt_gender_shuffled" id="rad_f_2291" value="Female"> Female
+                </label>
+                <label>
+                    <input type="radio" name="opt_gender_shuffled" id="rad_t_4410" value="Transgender"> Transgender
+                </label>
+            </div>
+        </div>
+
+        <!-- NOTE: First Name is moved to the LAST position -->
+        <!-- ID changed from 'fname' to 'user_txt_firstname_5541', name changed to 'given_name' -->
+        <div class="field-block">
+            <label class="custom-label">First Name</label>
+            <input type="text" id="user_txt_firstname_5541" name="given_name" placeholder="Enter given name" class="custom-input" />
+        </div>
+    </div>
+</body>
+</html>
+
