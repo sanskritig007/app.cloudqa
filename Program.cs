@@ -27,8 +27,14 @@ try
     Console.WriteLine($"[Browser] Navigating to: {settings.BaseUrl}");
     driver.Navigate().GoToUrl(settings.BaseUrl);
 
-    Console.WriteLine($"[Success] Page Title: '{driver.Title}'");
+    Console.WriteLine($"[Success] Page loaded successfully!");
     Console.WriteLine("=== Milestone 1 Verification Complete! ===");
+
+    // Keeps browser open so you can inspect it visually
+    Console.ForegroundColor = ConsoleColor.Cyan;
+    Console.WriteLine("\n--> Browser is open. Press ENTER in this terminal to close it...");
+    Console.ResetColor();
+    Console.ReadLine();
 }
 finally
 {
